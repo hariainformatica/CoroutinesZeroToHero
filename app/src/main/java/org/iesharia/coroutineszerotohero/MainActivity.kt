@@ -30,11 +30,11 @@ class MainActivity : ComponentActivity() {
             var resultado : Response<SuperHeroDataResponse> = retrofit.getSuperheroes("a")
             withContext(Dispatchers.Main){
                 if (resultado.isSuccessful){
-                    Log.i("ejemplo", "$resultado")
+                    Log.i("ejemplo1", "$resultado")
 
                     Toast.makeText(this@MainActivity, "Funciona",Toast.LENGTH_SHORT).show()
 
-                    Log.i("ejemplo", resultado.body().toString())
+                    Log.i("ejemplo2", resultado.body().toString())
                 }
             }
         }
@@ -43,7 +43,6 @@ class MainActivity : ComponentActivity() {
                 Surface{
                     SuperheroList()
                 }
-
             }
         }
     }
